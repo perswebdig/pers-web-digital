@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -13,17 +13,37 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { defaultOgImage, organizationSchema } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
+/*
+ * Fontes hospedadas no próprio repositório (next/font/local).
+ * Motivos: build determinístico na Vercel (sem dependência de rede para o
+ * Google Fonts), zero requisição a fonts.gstatic.com na primeira visita
+ * (melhor LCP e menos exposição de IP de visitante — ponto relevante para a
+ * LGPD) e recorte `latin`, que cobre todo o português do Brasil.
+ */
+const inter = localFont({
+  src: [
+    {
+      path: "../fonts/inter-latin-wght.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
   variable: "--font-inter",
+  display: "swap",
+  fallback: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
 });
 
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  display: "swap",
+const jakarta = localFont({
+  src: [
+    {
+      path: "../fonts/plus-jakarta-latin-wght.woff2",
+      weight: "200 800",
+      style: "normal",
+    },
+  ],
   variable: "--font-jakarta",
-  weight: ["600", "700", "800"],
+  display: "swap",
+  fallback: ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
 });
 
 export const metadata: Metadata = {
