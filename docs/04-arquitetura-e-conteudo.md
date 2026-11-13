@@ -252,4 +252,4 @@ topic cluster descrito em `docs/06-seo-on-page.md`.
 · `npm run start` · `npm run lint` (`eslint-config-next`). Nenhuma variável de ambiente é
 obrigatória para o build: sem analytics e sem chaves de lead, o site funciona por completo e
 não carrega script de terceiros. A lista de chaves está em
-`docs/05-formularios-e-integracoes.md`; o passo a passo de publicação, em `docs/08-...`.
+`docs/05-formularios-e-integracoes.md`; o passo a passo de publicação, em `docs/08-guia-de-uso.md`.

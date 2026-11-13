@@ -170,7 +170,7 @@ export default function ContatoPage() {
                 },
               ].map((item) => (
                 <li key={item.text} className="flex items-start gap-3 text-[0.95rem] text-ink-soft">
-                  <Icon name={item.icon} className="mt-0.5 h-5 w-5 shrink-0 text-aqua-500" />
+                  <Icon name={item.icon} className="mt-0.5 h-5 w-5 shrink-0 text-aqua-600" />
                   {item.text}
                 </li>
               ))}

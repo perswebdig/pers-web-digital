@@ -128,19 +128,19 @@ export function ServiceTemplate({ slug }: { slug: string }) {
                 </p>
                 <ul className="mt-3 space-y-2 text-sm text-ink-soft">
                   <li className="flex items-start gap-2">
-                    <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-500" />
+                    <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-600" />
                     {service.category === "infra"
                       ? "Mensal (TI gerenciada) com SLA e relatório de indicadores"
                       : "Projeto com escopo e preço fechados, ou sprint mensal de evolução"}
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-500" />
+                    <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-600" />
                     {service.category === "infra"
                       ? "Implantação assistida com transferência de conhecimento"
                       : "Entregas por fase com ambiente de homologação"}
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-500" />
+                    <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-600" />
                     Documentação e acessos registrados em nome do cliente
                   </li>
                 </ul>

@@ -103,13 +103,13 @@ export function ArticleBody({
                   </div>
                   <dl className="mt-5 grid grid-cols-2 gap-4 border-t border-white/10 pt-4 text-sm">
                     <div>
-                      <dt className="text-2xs uppercase tracking-[0.12em] text-navy-400">
+                      <dt className="text-2xs uppercase tracking-[0.12em] text-navy-300">
                         Publicado
                       </dt>
                       <dd className="mt-1 text-navy-100">{formatDate(post.date)}</dd>
                     </div>
                     <div>
-                      <dt className="text-2xs uppercase tracking-[0.12em] text-navy-400">Leitura</dt>
+                      <dt className="text-2xs uppercase tracking-[0.12em] text-navy-300">Leitura</dt>
                       <dd className="mt-1 text-navy-100">{time} minutos</dd>
                     </div>
                   </dl>
@@ -207,7 +207,7 @@ export function ArticleBody({
                   href={waLink("default")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-11 items-center gap-2 rounded-xl bg-[#1faa54] px-5 text-sm font-semibold text-white hover:bg-[#25D366]"
+                  className="inline-flex h-11 items-center gap-2 rounded-xl bg-wa-600 px-5 text-sm font-semibold text-white hover:bg-wa-700"
                 >
                   <Icon name="message" className="h-5 w-5" />
                   Perguntar agora

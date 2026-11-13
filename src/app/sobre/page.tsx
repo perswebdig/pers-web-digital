@@ -320,7 +320,7 @@ export default function SobrePage() {
               <ul className="mt-4 space-y-2.5 text-sm">
                 {site.certifications.map((cert) => (
                   <li key={cert} className="flex items-start gap-2.5 text-ink-soft">
-                    <Icon name="badge" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-500" />
+                    <Icon name="badge" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-600" />
                     {cert}
                   </li>
                 ))}

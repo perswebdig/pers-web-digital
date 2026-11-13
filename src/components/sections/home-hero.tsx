@@ -176,7 +176,7 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-navy-400 sm:mt-16">
+        <div className="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-navy-300 sm:mt-16">
           {site.certifications.slice(0, 5).map((cert) => (
             <span key={cert} className="inline-flex items-center gap-2">
               <Icon name="badge" className="h-4 w-4 text-aqua-500/80" />
@@ -213,7 +213,7 @@ function FloatingChip({
     >
       <Icon name={icon} className="h-[18px] w-[18px] shrink-0" />
       <div className="min-w-0">
-        <p className="text-2xs uppercase tracking-wide text-navy-400">{label}</p>
+        <p className="text-2xs uppercase tracking-wide text-navy-300">{label}</p>
         <p className="truncate text-sm font-semibold text-white">{value}</p>
       </div>
     </div>

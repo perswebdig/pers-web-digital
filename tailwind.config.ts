@@ -50,12 +50,26 @@ const config: Config = {
           DEFAULT: "#f6f8fc",
           alt: "#eef2f9",
         },
+        /* Verde de ação WhatsApp: #078745 garante 4,6:1 com branco (AA) */
+        wa: {
+          50: "#e9f8ef",
+          100: "#cdf0dc",
+          200: "#9ee2bb",
+          300: "#63cca0",
+          400: "#2fb07d",
+          500: "#129a5f",
+          600: "#078745",
+          700: "#066535",
+          800: "#07512c",
+          900: "#074326",
+          DEFAULT: "#078745",
+        },
         ink: {
           DEFAULT: "#0f172a",
           soft: "#334155",
           muted: "#64748b",
         },
-        success: "#16a34a",
+        success: "#15803d",
         danger: "#dc2626",
       },
       fontFamily: {

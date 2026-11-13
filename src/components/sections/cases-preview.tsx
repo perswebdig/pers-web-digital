@@ -99,7 +99,7 @@ export function CasesPreview({ limit = 3 }: { limit?: number }) {
 
       <Reveal delay={0.15}>
         <div className="mt-8 flex flex-wrap items-center gap-3 rounded-2xl border border-navy-100 bg-surface px-5 py-4 text-sm text-ink-soft">
-          <Icon name="sparkles" className="h-4 w-4 text-aqua-500" />
+          <Icon name="sparkles" className="h-4 w-4 text-aqua-600" />
           Cases com dados de clientes reais e autorização de publicação são adicionados em{" "}
           <code className="rounded bg-white px-1.5 py-0.5 font-mono text-xs text-navy-800">
             src/data/home.ts

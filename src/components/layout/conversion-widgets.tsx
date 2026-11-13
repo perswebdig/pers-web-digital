@@ -34,10 +34,10 @@ export function WhatsAppFloat() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.25 }}
-          className="group fixed bottom-7 right-5 z-40 hidden h-14 items-center gap-3 rounded-full bg-[#1faa54] pl-4 pr-5 text-white shadow-[0_10px_30px_-8px_rgba(31,170,84,.65)] transition-colors hover:bg-[#25D366] sm:inline-flex lg:bottom-8 lg:right-8"
+          className="group fixed bottom-7 right-5 z-40 hidden h-14 items-center gap-3 rounded-full bg-wa-600 pl-4 pr-5 text-white shadow-[0_10px_30px_-8px_rgba(31,170,84,.65)] transition-colors hover:bg-wa-700 sm:inline-flex lg:bottom-8 lg:right-8"
           aria-label={`Falar com a ${site.name} no WhatsApp`}
         >
-          <span className="absolute inset-0 -z-10 rounded-full bg-[#25D366]/40 animate-pulse-ring" aria-hidden="true" />
+          <span className="absolute inset-0 -z-10 rounded-full bg-wa-600/35 animate-pulse-ring" aria-hidden="true" />
           <MessageCircle className="h-6 w-6" />
           <span className="max-w-0 overflow-hidden whitespace-nowrap text-sm font-semibold opacity-0 transition-all duration-300 group-hover:max-w-[11rem] group-hover:opacity-100">
             Falar com um consultor

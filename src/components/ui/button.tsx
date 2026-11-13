@@ -16,7 +16,7 @@ const buttonVariants = cva(
           "bg-gradient-to-r from-tech-600 to-tech-700 text-white shadow-glow hover:from-tech-500 hover:to-tech-600 hover:shadow-card-hover active:translate-y-px",
         aqua: "bg-aqua-500 text-navy-950 shadow-glow-cyan hover:bg-aqua-400 active:translate-y-px",
         whatsapp:
-          "bg-[#1faa54] text-white shadow-card hover:bg-[#25D366] active:translate-y-px",
+          "bg-wa-600 text-white shadow-card hover:bg-wa-700 active:translate-y-px",
         secondary:
           "border border-navy-200 bg-white text-navy-900 shadow-card hover:border-tech-300 hover:text-tech-700 active:translate-y-px",
         "on-dark":

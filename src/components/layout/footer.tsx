@@ -203,7 +203,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-white/10 py-7 text-xs text-navy-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 border-t border-white/10 py-7 text-xs text-navy-300 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {currentYear} {site.legalName} · CNPJ {site.cnpj} · Todos os direitos
             reservados.

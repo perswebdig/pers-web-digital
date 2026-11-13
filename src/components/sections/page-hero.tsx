@@ -80,7 +80,7 @@ export function PageHero({
               </Button>
             </div>
 
-            <p className="mt-3.5 text-xs text-navy-400">
+            <p className="mt-3.5 text-xs text-navy-300">
               Resposta em até 1 hora útil · Diagnóstico sem compromisso
             </p>
 

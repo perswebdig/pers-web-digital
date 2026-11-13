@@ -28,7 +28,7 @@ export function DifferentialsSection() {
                 "Documentação e acessos sempre em seu nome, sem dependência de fornecedor.",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
-                  <Icon name="check" className="mt-0.5 h-5 w-5 shrink-0 text-aqua-500" />
+                  <Icon name="check" className="mt-0.5 h-5 w-5 shrink-0 text-aqua-600" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -62,7 +62,7 @@ export function DifferentialsSection() {
                     {item.description}
                   </p>
                   <p className="mt-4 flex items-start gap-2 border-t border-navy-100 pt-4 text-xs font-medium leading-5 text-tech-700">
-                    <Icon name="badge" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-500" />
+                    <Icon name="badge" className="mt-0.5 h-4 w-4 shrink-0 text-aqua-600" />
                     {item.proof}
                   </p>
                 </article>
