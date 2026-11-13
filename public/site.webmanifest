@@ -1,0 +1,21 @@
+{
+  "name": "Pers Web Digital — Consultoria de TI e Desenvolvimento Digital",
+  "short_name": "Pers Web",
+  "description": "Consultoria de TI, infraestrutura gerenciada, servidores, nuvem, segurança, sites, landing pages e aplicativos.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A1F44",
+  "theme_color": "#0A1F44",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "icons": [
+    { "src": "/favicon-16x16.png", "sizes": "16x16", "type": "image/png" },
+    { "src": "/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "categories": ["technology", "business", "productivity"]
+}

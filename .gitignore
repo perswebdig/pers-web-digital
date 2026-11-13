@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# QA local
+/shots
+*.cpuprofile
+# envs reais
+.env
+.env.local
