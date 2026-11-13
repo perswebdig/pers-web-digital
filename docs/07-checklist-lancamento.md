@@ -177,3 +177,29 @@ Marque cada item com data e responsável. O site só recebe tráfego pago/SEO de
 - [ ] Revisão de 7 dias: cobertura no Search Console, eventos no GA4, leads no CRM, erros.
 - [ ] Revisão de 30 dias: páginas com mais cliques de CTA, perguntas de FAQ que viraram objeção
       real, custo por lead por landing, backlog de conteúdo para os próximos 90 dias.
+
+---
+
+## Anexo: status dos headers de segurança após o deploy inicial
+
+Implementados em `next.config.mjs` (bloqueio de sniffing, frame e políticas de
+permissão, além do sinal de indexação):
+
+- [x] `X-Content-Type-Options: nosniff`
+- [x] `Referrer-Policy: strict-origin-when-cross-origin`
+- [x] `X-Frame-Options: SAMEORIGIN`
+- [x] `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload`
+- [x] `Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()`
+- [x] `X-Robots-Tag: index, follow`
+
+Pendências deliberadas:
+
+- [ ] `Content-Security-Policy`: ainda não publicada porque GA4, Meta Pixel,
+      Calendly e os webhooks de lead exigem `script-src`/`frame-src` próprios.
+      Recomendação: gerar a CSP depois de preencher as chaves de analytics em
+      `.env.local` e aplicar primeiro em `Content-Security-Policy-Report-Only`.
+- [ ] Em URLs de projeto da Vercel (`*.vercel.app`) a plataforma injeta
+      `x-robots-tag: noindex` sobre o nosso header — comportamento esperado e
+      desejável antes do go-live. Ao apontar o domínio definitivo
+      (`perswebdigital.com.br`), o header próprio passa a valer e a auditoria
+      de SEO do Lighthouse deixa de acusar “Page is blocked from indexing”.
