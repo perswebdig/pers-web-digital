@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { MessageCircle, Phone, Sparkles, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LeadForm } from "@/components/forms/lead-form";
@@ -25,7 +25,7 @@ export function WhatsAppFloat() {
   return (
     <AnimatePresence>
       {visible ? (
-        <motion.a
+        <m.a
           href={waLink("default")}
           target="_blank"
           rel="noopener noreferrer"
@@ -42,7 +42,7 @@ export function WhatsAppFloat() {
           <span className="max-w-0 overflow-hidden whitespace-nowrap text-sm font-semibold opacity-0 transition-all duration-300 group-hover:max-w-[11rem] group-hover:opacity-100">
             Falar com um consultor
           </span>
-        </motion.a>
+        </m.a>
       ) : null}
     </AnimatePresence>
   );
@@ -62,7 +62,7 @@ export function MobileCtaBar() {
   return (
     <AnimatePresence>
       {visible ? (
-        <motion.div
+        <m.div
           initial={{ y: 80 }}
           animate={{ y: 0 }}
           exit={{ y: 80 }}
@@ -87,7 +87,7 @@ export function MobileCtaBar() {
           >
             <Phone className="h-5 w-5" /> Ligar agora
           </Button>
-        </motion.div>
+        </m.div>
       ) : null}
     </AnimatePresence>
   );
@@ -147,7 +147,7 @@ export function ExitIntentPopup() {
     <AnimatePresence>
       {open && !dismissed ? (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -155,7 +155,7 @@ export function ExitIntentPopup() {
             className="absolute inset-0 bg-navy-950/70 backdrop-blur-sm"
             aria-hidden="true"
           />
-          <motion.div
+          <m.div
             role="dialog"
             aria-modal="true"
             aria-labelledby="exit-title"
@@ -205,7 +205,7 @@ export function ExitIntentPopup() {
             >
               Não obrigada, só estava olhando
             </button>
-          </motion.div>
+          </m.div>
         </div>
       ) : null}
     </AnimatePresence>

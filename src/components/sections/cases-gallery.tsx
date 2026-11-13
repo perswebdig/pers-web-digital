@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Icon, type IconKey } from "@/components/ui/icon";
 import { Button } from "@/components/ui/button";
 import { cases } from "@/data/home";
@@ -69,10 +69,9 @@ export function CasesGallery() {
 
       <div className="mt-10 space-y-6">
         {visible.map((item, index) => (
-          <motion.article
+          <m.article
             key={item.slug}
             id={item.slug}
-            layout
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.05 }}
@@ -165,7 +164,7 @@ export function CasesGallery() {
                 </div>
               </div>
             </div>
-          </motion.article>
+          </m.article>
         ))}
       </div>
 

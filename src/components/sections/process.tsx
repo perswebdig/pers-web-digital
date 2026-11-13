@@ -24,8 +24,12 @@ export function ProcessSection() {
 
         <ol className="mt-14 grid gap-4 lg:grid-cols-5">
           {processSteps.map((step, index) => (
-            <Reveal key={step.number} delay={index * 0.08}>
-              <li className="group relative flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-5 backdrop-blur-sm transition-colors duration-300 hover:border-aqua-400/40 hover:bg-white/[0.09]">
+            <Reveal
+              key={step.number}
+              as="li"
+              delay={index * 0.08}
+              className="group relative flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-5 backdrop-blur-sm transition-colors duration-300 hover:border-aqua-400/40 hover:bg-white/[0.09]"
+            >
                 <div className="flex items-center justify-between">
                   <span className="font-display text-2xl font-extrabold text-white/15 transition-colors duration-300 group-hover:text-aqua-300/40">
                     {step.number}
@@ -55,7 +59,6 @@ export function ProcessSection() {
                     className="absolute -right-3 top-1/2 hidden h-6 w-6 -translate-y-1/2 text-white/20 lg:block"
                   />
                 ) : null}
-              </li>
             </Reveal>
           ))}
         </ol>

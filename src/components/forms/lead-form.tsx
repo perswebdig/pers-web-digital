@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { AlertCircle, CheckCircle2, Loader2, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn, waLink } from "@/lib/utils";
@@ -99,7 +99,7 @@ export function LeadForm({
 
   if (status === "success") {
     return (
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         className={cn(
@@ -132,7 +132,7 @@ export function LeadForm({
             </div>
           </div>
         </div>
-      </motion.div>
+      </m.div>
     );
   }
 

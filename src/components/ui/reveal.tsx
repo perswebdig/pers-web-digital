@@ -1,25 +1,37 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { createElement } from "react";
+import { m, useReducedMotion } from "framer-motion";
 
-/** Scroll reveal acessível: respeita prefers-reduced-motion */
+type RevealTag = "div" | "li" | "article" | "span";
+
+/**
+ * Scroll reveal acessível: respeita `prefers-reduced-motion` e permite
+ * renderizar o item como `li`/`article` para manter a semântica de listas
+ * (`<ol>`/`<ul>` só podem ter `<li>` como filhos diretos).
+ */
 export function Reveal({
   children,
   delay = 0,
   y = 18,
   className,
+  as = "div",
 }: {
   children: React.ReactNode;
   delay?: number;
   y?: number;
   className?: string;
+  as?: RevealTag;
 }) {
   const reduce = useReducedMotion();
+  const Tag = m[as];
 
-  if (reduce) return <div className={className}>{children}</div>;
+  if (reduce) {
+    return createElement(as, { className }, children);
+  }
 
   return (
-    <motion.div
+    <Tag
       className={className}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +39,7 @@ export function Reveal({
       transition={{ duration: 0.55, delay, ease: [0.22, 0.61, 0.36, 1] }}
     >
       {children}
-    </motion.div>
+    </Tag>
   );
 }
 
@@ -40,10 +52,7 @@ export function RevealGroup({
   className?: string;
   stagger?: number;
 }) {
-  const reduce = useReducedMotion();
   const items = Array.isArray(children) ? children : [children];
-
-  if (reduce) return <div className={className}>{items}</div>;
 
   return (
     <div className={className}>

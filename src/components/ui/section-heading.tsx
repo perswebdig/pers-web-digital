@@ -43,7 +43,7 @@ export function SectionHeading({
         <p
           className={cn(
             "mt-4 text-[1.05rem] leading-7 sm:text-lg",
-            dark ? "text-navy-200" : "text-ink-muted",
+            dark ? "text-navy-200" : "text-ink-soft",
           )}
         >
           {description}

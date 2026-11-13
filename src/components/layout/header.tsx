@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
@@ -91,7 +91,7 @@ export function Header() {
 
             <AnimatePresence>
               {solutionsOpen ? (
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, y: 8, scale: 0.985 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.99 }}
@@ -136,7 +136,7 @@ export function Header() {
                       </Button>
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               ) : null}
             </AnimatePresence>
           </div>
@@ -185,7 +185,7 @@ export function Header() {
       <AnimatePresence>
         {open ? (
           <>
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -193,7 +193,7 @@ export function Header() {
               className="fixed inset-0 z-50 bg-navy-950/60 backdrop-blur-sm lg:hidden"
               aria-hidden="true"
             />
-            <motion.div
+            <m.div
               role="dialog"
               aria-modal="true"
               aria-label="Menu de navegação"
@@ -263,7 +263,7 @@ export function Header() {
                   Falar no WhatsApp
                 </Button>
               </div>
-            </motion.div>
+            </m.div>
           </>
         ) : null}
       </AnimatePresence>

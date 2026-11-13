@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Container, Section } from "@/components/ui/layout";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -40,7 +40,7 @@ export function TestimonialsSection() {
           <Quote className="absolute right-6 top-6 h-16 w-16 text-tech-100" aria-hidden="true" />
 
           <AnimatePresence mode="wait">
-            <motion.blockquote
+            <m.blockquote
               key={active.author}
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,11 @@ export function TestimonialsSection() {
               transition={{ duration: 0.35 }}
               className="relative"
             >
-              <div className="flex items-center gap-1 text-aqua-500" aria-label="Nota 5 de 5">
+              <div
+                className="flex items-center gap-1 text-aqua-600"
+                role="img"
+                aria-label="Nota 5 de 5"
+              >
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Icon key={i} name="star" className="h-4 w-4 fill-current" />
                 ))}
@@ -75,7 +79,7 @@ export function TestimonialsSection() {
                   {active.sector}
                 </span>
               </footer>
-            </motion.blockquote>
+            </m.blockquote>
           </AnimatePresence>
         </div>
 
@@ -100,10 +104,16 @@ export function TestimonialsSection() {
                 aria-selected={i === index}
                 aria-label={`Depoimento de ${t.author}`}
                 onClick={() => setIndex(i)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i === index ? "w-7 bg-tech-600" : "w-2 bg-navy-200 hover:bg-navy-300"
-                }`}
-              />
+                className="group flex h-11 w-11 items-center justify-center rounded-full"
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all duration-300 ${
+                    i === index
+                      ? "w-7 bg-tech-600"
+                      : "w-2 bg-navy-200 group-hover:bg-navy-300"
+                  }`}
+                />
+              </button>
             ))}
           </div>
 

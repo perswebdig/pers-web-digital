@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
+import { MotionProvider } from "@/components/ui/motion-provider";
 import { Footer } from "@/components/layout/footer";
 import {
   ExitIntentPopup,
@@ -117,17 +118,19 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${inter.variable} ${jakarta.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">
         <JsonLd data={organizationSchema()} />
-        <Header />
-        <main id="conteudo" className="flex-1">
-          {children}
-        </main>
-        <Footer />
-        {/* espaço da barra fixa de CTA no mobile */}
-        <div className="h-20 lg:hidden" aria-hidden="true" />
-        <WhatsAppFloat />
-        <MobileCtaBar />
-        <ExitIntentPopup />
-        <Tracking />
+        <MotionProvider>
+          <Header />
+          <main id="conteudo" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+          {/* espaço da barra fixa de CTA no mobile */}
+          <div className="h-20 lg:hidden" aria-hidden="true" />
+          <WhatsAppFloat />
+          <MobileCtaBar />
+          <ExitIntentPopup />
+          <Tracking />
+        </MotionProvider>
       </body>
     </html>
   );
